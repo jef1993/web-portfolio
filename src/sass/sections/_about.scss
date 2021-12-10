@@ -1,0 +1,52 @@
+.about {
+  grid-area: 2/2 / span 7 / span 8;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-image: linear-gradient(
+      to bottom,
+      $color-blue-light 0%,
+      rgba($color-blue-dark, 0.5) 35%,
+      transparent 100%
+    )
+    1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__name {
+    font-size: 8.6rem;
+    color: transparent;
+    -webkit-text-stroke: 0.015em $color-blue-light;
+    margin: 0;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 8vmin;
+    }
+  }
+
+  &__job {
+    margin: 0 0 5rem 0;
+    @media screen and (max-width: 1200px) {
+      font-size: 3vmin;
+    }
+  }
+
+  &__content {
+    width: 40rem;
+    text-align: center;
+
+    @media screen and (max-width: 600px) {
+      width: 65vmin;
+      font-size: 4vmin;
+    }
+  }
+}

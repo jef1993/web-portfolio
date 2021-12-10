@@ -1,0 +1,46 @@
+.nav {
+  grid-area: 1/4 / span 1 / span 4;
+  display: flex;
+  flex-direction: column-reverse;
+
+  @media screen and (max-width: 1200px) {
+    grid-area: 1/3 / span 1 / span 6;
+  }
+
+  &__bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    transform: all 0.1s;
+
+    @media screen and (max-width: 1200px) {
+      justify-content: center;
+    }
+
+    // &:hover .nav__title:not(:hover) {
+    //   opacity: 0.6;
+    // }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0 0.75rem;
+    transition: all 0.1s;
+    text-decoration: none;
+
+    &:hover {
+      transform: translateY(-0.1em);
+      text-shadow: rgba($color-blue-dark, 0.6) 0.1em 0.3em;
+    }
+
+    @media screen and (max-width: 1200px) {
+      font-size: 1.6rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 1.2rem;
+    }
+  }
+}
