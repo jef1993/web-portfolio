@@ -171,7 +171,7 @@ body {
 }
 .nav__title:hover {
   transform: translateY(-0.1em);
-  text-shadow: rgba(35, 74, 158, 0.6) 0.1em 0.3em;
+  text-shadow: rgba(35, 74, 158, 0.6) 0.2rem 0.6rem;
 }
 @media screen and (max-width: 1200px) {
   .nav__title {
@@ -188,7 +188,7 @@ body {
   grid-area: 2/2/span 7/span 8;
   border-width: 0.2rem;
   border-style: solid;
-  border-image: linear-gradient(to bottom, #02b3f7 0%, rgba(35, 74, 158, 0.5) 35%, transparent 100%) 1;
+  border-image: linear-gradient(to bottom, #02b3f7 0%, rgba(35, 74, 158, 0.6) 45%, transparent 100%) 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -208,7 +208,12 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .about__name {
-    font-size: 8vmin;
+    font-size: 6.4rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .about__name {
+    font-size: 8vw;
   }
 }
 .about__job {
@@ -216,7 +221,12 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .about__job {
-    font-size: 3vmin;
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .about__job {
+    font-size: 3vw;
   }
 }
 .about__content {
@@ -231,8 +241,8 @@ body {
 }
 
 .exp {
-  grid-area: 13/2/span 7/span 8;
-  background-color: yellow;
+  grid-area: 14/2/span 7/span 8;
+  border: 2px solid rgba(189, 150, 22, 0.7);
 }
 
 /*# sourceMappingURL=App.css.map */

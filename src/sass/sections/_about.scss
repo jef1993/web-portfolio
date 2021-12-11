@@ -5,7 +5,7 @@
   border-image: linear-gradient(
       to bottom,
       $color-blue-light 0%,
-      rgba($color-blue-dark, 0.5) 35%,
+      rgba($color-blue-dark, 0.6) 45%,
       transparent 100%
     )
     1;
@@ -29,14 +29,22 @@
     margin: 0;
 
     @media screen and (max-width: 1200px) {
-      font-size: 8vmin;
+      font-size: 6.4rem;
+    }
+
+    @media screen and (max-width: 800px) {
+      font-size: 8vw;
     }
   }
 
   &__job {
     margin: 0 0 5rem 0;
     @media screen and (max-width: 1200px) {
-      font-size: 3vmin;
+      font-size: 2.4rem;
+    }
+
+    @media screen and (max-width: 800px) {
+      font-size: 3vw;
     }
   }
 
