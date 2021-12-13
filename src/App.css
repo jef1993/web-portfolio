@@ -170,7 +170,7 @@ body {
   text-decoration: none;
 }
 .nav__title:hover {
-  transform: translateY(-0.1em);
+  transform: translateY(-0.2em);
   text-shadow: rgba(35, 74, 158, 0.6) 0.2rem 0.6rem;
 }
 @media screen and (max-width: 1200px) {
@@ -242,7 +242,204 @@ body {
 
 .exp {
   grid-area: 14/2/span 7/span 8;
-  border: 2px solid rgba(189, 150, 22, 0.7);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(20rem, 53rem));
+  grid-template-rows: auto auto 2fr;
+  gap: 0 1.5rem;
+  margin-top: 3rem;
+}
+.exp__title-box {
+  grid-area: 1/1/span 1/-1;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.exp__title {
+  font-size: 6.4rem;
+  margin: 1.5rem 0 0 0;
+  width: 5.5em;
+}
+@media screen and (max-width: 1200px) {
+  .exp__title {
+    font-size: 4.8vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  .exp__title {
+    font-size: 3.6rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .exp__title {
+    font-size: 6.4vw;
+  }
+}
+.exp__title--2 {
+  text-align: right;
+}
+.exp__and {
+  font-size: 4.8rem;
+  color: transparent;
+  -webkit-text-stroke: 0.02em #02b3f7;
+  align-self: center;
+}
+@media screen and (max-width: 1200px) {
+  .exp__and {
+    font-size: 3.6vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  .exp__and {
+    font-size: 2.4rem;
+  }
+}
+.exp__container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+}
+
+.skills {
+  grid-column: 1/span 1;
+  border-image: linear-gradient(to right, #02b3f7 0%, rgba(35, 74, 158, 0.8) 75%) 1;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.skills__list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media screen and (max-width: 750px) {
+  .skills__list {
+    grid-template-columns: 1fr;
+  }
+}
+.skills__item {
+  text-decoration: none;
+  border: 0.1rem solid #e9e8e2;
+  text-transform: uppercase;
+  padding: 0.1em 0.2em;
+  font-size: 2.4rem;
+  align-items: end;
+}
+@media screen and (max-width: 900px) {
+  .skills__item {
+    font-size: 2rem;
+  }
+}
+.skills__extra {
+  height: 85%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+  align-self: flex-end;
+}
+.skills__extra-front {
+  font-size: 2rem;
+  text-align: center;
+}
+@media screen and (max-width: 1200px) {
+  .skills__extra-front {
+    font-size: 1.6rem;
+  }
+}
+
+.tools {
+  grid-column: 2/span 1;
+  border-image: linear-gradient(to left, #02b3f7 0%, rgba(35, 74, 158, 0.8) 75%) 1;
+}
+.tools__list {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  gap: 1rem;
+  margin: 1.5rem;
+}
+@media screen and (max-width: 1200px) {
+  .tools__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 750px) {
+  .tools__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tool {
+  border: 1px solid #e9e8e2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  height: 20rem;
+}
+@media screen and (max-width: 1200px) {
+  .tool {
+    height: 15rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .tool {
+    height: auto;
+  }
+}
+.tool__title {
+  align-self: flex-start;
+  font-size: 2rem;
+  width: 5em;
+  margin: 1rem;
+}
+@media screen and (max-width: 1200px) {
+  .tool__title {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .tool__title {
+    margin: 0.8rem;
+    font-size: 1.4rem;
+    width: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .tool__img {
+    height: 6rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .tool__img {
+    height: 5rem;
+  }
+}
+.tool__name {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem;
+}
+@media screen and (max-width: 1200px) {
+  .tool__name {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .tool__name {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .tool__name {
+    margin: 0.8rem;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */
