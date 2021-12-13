@@ -1,13 +1,15 @@
 .btn-next {
   background-color: transparent;
   border: none;
-  margin-top: 2rem;
   transition: all 0.2s;
+  margin: 0;
+  padding: 0;
+  display: table;
 
   &:hover {
     & .btn-next__link {
       text-decoration: underline $color-white 0.2em;
-      padding: 0.8em 2.8em;
+      padding: 0.8em 2.9em;
       background-color: rgba($color-black, 0.4);
     }
   }
@@ -41,6 +43,7 @@
     border-image-width: 0;
     position: relative;
     transition: all 0.2s;
+    display: table-cell;
 
     @media screen and (max-width: 600px) {
       font-size: 4vmin;

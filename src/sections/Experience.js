@@ -6,6 +6,8 @@ import photoshop from "../img/photoshop.svg";
 import trello from "../img/trello.svg";
 import vscode from "../img/vscode.svg";
 
+import BtnNext from "../components/BtnNext";
+
 const skills = [
   "HTML",
   "CSS",
@@ -17,6 +19,8 @@ const skills = [
   "MongoDB",
   "Mongoose",
 ];
+
+const extra = ["Python", "MySQL", "Bootstrap", "Jest", "jQuery"];
 
 function Experience() {
   return (
@@ -33,11 +37,15 @@ function Experience() {
             <li className="font-content skills__item">{el}</li>
           ))}
         </ul>
-        <div className="skills__extra">
-          <div className="font-wide skills__extra-front">
-            <h3>Also have experience with...</h3>
-          </div>
-          <div className="skills__extra-back"></div>
+        <div className="extra">
+          <h3 className="font-wide extra__title">
+            Also have experience with...
+          </h3>
+          <ul className="extra__list">
+            {extra.map((el) => (
+              <li className="font-wide extra__item">{el}</li>
+            ))}
+          </ul>
         </div>
       </div>
       <div className="exp__container tools">
@@ -49,6 +57,7 @@ function Experience() {
           <Tool type="scrum" src={trello} name="Trello" />
         </ul>
       </div>
+      <BtnNext toSection="#projects" text="My projects" />
     </section>
   );
 }

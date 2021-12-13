@@ -33,14 +33,17 @@ body {
   @media screen and (max-width: 1200px) {
     padding: 0 6rem;
     grid-template-columns:
-      minmax(0, 1fr) minmax(4rem, 9rem) repeat(6, 9rem) minmax(4rem, 9rem)
+      minmax(0, 1fr) minmax(4rem, 12rem) repeat(6, minmax(4rem, 12rem)) minmax(
+        4rem,
+        12rem
+      )
       minmax(0, 1fr);
   }
 
   @media screen and (max-width: 900px) {
     padding: 0 0;
     grid-template-columns:
-      minmax(0, 1fr) minmax(2rem, 9rem) repeat(6, minmax(4rem, 9rem)) minmax(
+      minmax(0, 1fr) minmax(2rem, 9rem) repeat(6, minmax(0, 9rem)) minmax(
         2rem,
         9rem
       )

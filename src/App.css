@@ -31,13 +31,13 @@ body {
 @media screen and (max-width: 1200px) {
   .main {
     padding: 0 6rem;
-    grid-template-columns: minmax(0, 1fr) minmax(4rem, 9rem) repeat(6, 9rem) minmax(4rem, 9rem) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(4rem, 12rem) repeat(6, minmax(4rem, 12rem)) minmax(4rem, 12rem) minmax(0, 1fr);
   }
 }
 @media screen and (max-width: 900px) {
   .main {
     padding: 0 0;
-    grid-template-columns: minmax(0, 1fr) minmax(2rem, 9rem) repeat(6, minmax(4rem, 9rem)) minmax(2rem, 9rem) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(2rem, 9rem) repeat(6, minmax(0, 9rem)) minmax(2rem, 9rem) minmax(0, 1fr);
   }
 }
 
@@ -76,12 +76,14 @@ body {
 .btn-next {
   background-color: transparent;
   border: none;
-  margin-top: 2rem;
   transition: all 0.2s;
+  margin: 0;
+  padding: 0;
+  display: table;
 }
 .btn-next:hover .btn-next__link {
   text-decoration: underline #e9e8e2 0.2em;
-  padding: 0.8em 2.8em;
+  padding: 0.8em 2.9em;
   background-color: rgba(18, 23, 26, 0.4);
 }
 .btn-next:hover .btn-next__arrow {
@@ -108,6 +110,7 @@ body {
   border-image-width: 0;
   position: relative;
   transition: all 0.2s;
+  display: table-cell;
 }
 @media screen and (max-width: 600px) {
   .btn-next__link {
@@ -241,23 +244,25 @@ body {
 }
 
 .exp {
-  grid-area: 14/2/span 7/span 8;
+  grid-area: 14/2/span 6/span 8;
   display: grid;
   grid-template-columns: repeat(2, minmax(20rem, 53rem));
-  grid-template-rows: auto auto 2fr;
+  grid-template-rows: auto auto 1fr;
   gap: 0 1.5rem;
-  margin-top: 3rem;
 }
 .exp__title-box {
   grid-area: 1/1/span 1/-1;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  align-items: center;
+  align-self: flex-end;
+  margin: 8rem 0 2rem 0;
 }
 .exp__title {
   font-size: 6.4rem;
-  margin: 1.5rem 0 0 0;
+  margin: 0;
   width: 5.5em;
+  height: 2ch;
 }
 @media screen and (max-width: 1200px) {
   .exp__title {
@@ -280,8 +285,7 @@ body {
 .exp__and {
   font-size: 4.8rem;
   color: transparent;
-  -webkit-text-stroke: 0.02em #02b3f7;
-  align-self: center;
+  -webkit-text-stroke: 0.015em rgba(2, 179, 247, 0.7);
 }
 @media screen and (max-width: 1200px) {
   .exp__and {
@@ -298,6 +302,12 @@ body {
   flex-direction: column;
   border: 2px solid transparent;
 }
+.exp .btn-next {
+  grid-area: 3/1/span 1/-1;
+  align-self: flex-start;
+  justify-self: center;
+  margin-top: 3rem;
+}
 
 .skills {
   grid-column: 1/span 1;
@@ -310,10 +320,15 @@ body {
   padding: 0;
   margin: 1.5rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   gap: 1rem;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 900px) {
+  .skills__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
   .skills__list {
     grid-template-columns: 1fr;
   }
@@ -358,17 +373,16 @@ body {
 .tools__list {
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(auto, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   gap: 1rem;
   margin: 1.5rem;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
   .tools__list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 600px) {
   .tools__list {
     grid-template-columns: 1fr;
   }
@@ -378,36 +392,43 @@ body {
   border: 1px solid #e9e8e2;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   overflow: hidden;
   height: 20rem;
 }
 @media screen and (max-width: 1200px) {
   .tool {
-    height: 15rem;
+    height: 18vw;
+    min-height: 16rem;
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 900px) {
   .tool {
     height: auto;
+    min-height: auto;
   }
 }
 .tool__title {
   align-self: flex-start;
   font-size: 2rem;
-  width: 5em;
+  width: 1ch;
   margin: 1rem;
+  height: 2ch;
 }
 @media screen and (max-width: 1200px) {
   .tool__title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 900px) {
   .tool__title {
-    margin: 0.8rem;
     font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .tool__title {
+    height: 1ch;
     width: auto;
   }
 }
@@ -416,7 +437,7 @@ body {
     height: 6rem;
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 600px) {
   .tool__img {
     height: 5rem;
   }
@@ -424,7 +445,7 @@ body {
 .tool__name {
   font-size: 2rem;
   text-align: center;
-  margin: 1rem;
+  margin: 0.8rem;
 }
 @media screen and (max-width: 1200px) {
   .tool__name {
@@ -440,6 +461,42 @@ body {
   .tool__name {
     margin: 0.8rem;
   }
+}
+
+.extra {
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  align-self: center;
+  gap: 1rem;
+}
+.extra__title {
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  .extra__title {
+    font-size: 1.6rem;
+  }
+}
+.extra__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.extra__item {
+  font-size: 2rem;
+  text-align: center;
+  background-image: linear-gradient(to right, #02b3f7, rgba(35, 74, 158, 0.8) 75%);
+  background-clip: text;
+  background-position: center;
+  color: transparent;
 }
 
 /*# sourceMappingURL=App.css.map */
