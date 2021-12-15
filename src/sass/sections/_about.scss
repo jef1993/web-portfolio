@@ -24,16 +24,15 @@
 
   &__name {
     font-size: 8.6rem;
-    color: transparent;
-    -webkit-text-stroke: 0.015em $color-blue-light;
+    @include font-hollow;
     margin: 0;
 
     @media screen and (max-width: 1200px) {
-      font-size: 6.4rem;
+      font-size: 7.2vw;
     }
 
-    @media screen and (max-width: 800px) {
-      font-size: 8vw;
+    @media screen and (max-width: 900px) {
+      font-size: 8.2vw;
     }
 
     @media screen and (max-width: 600px) {
