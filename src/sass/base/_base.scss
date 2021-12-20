@@ -15,6 +15,12 @@ body {
   padding: 0;
 }
 
+br {
+  content: "";
+  display: block;
+  margin: 1ch;
+}
+
 .main {
   padding: 0 8rem;
   margin: auto;
@@ -29,7 +35,6 @@ body {
   min-height: 100vh;
   gap: 1.5rem;
   height: auto;
-  overflow-x: scroll;
 
   @media screen and (max-width: 1200px) {
     padding: 0 6rem;
@@ -50,6 +55,10 @@ body {
       )
       minmax(0, 1fr);
   }
+
+  @media screen and (max-width: 600px) {
+    overflow-x: hidden;
+  }
 }
 
 .bg {
@@ -61,5 +70,5 @@ body {
     $color-orange 100%
   );
   grid-area: 1/3 / -1 / span 6;
-  box-shadow: 0 0 25px 5px $color-shadow;
+  box-shadow: 0 0 25px 5px rgba($color-shadow, 0.8);
 }

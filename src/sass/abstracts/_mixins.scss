@@ -14,5 +14,12 @@
 
 @mixin font-hollow {
   color: transparent;
-  -webkit-text-stroke: 0.015em $color-blue-light;
+
+  @supports (-webkit-text-stroke: 0.015em $color-blue-light) {
+    -webkit-text-stroke: 0.015em $color-blue-light;
+  }
+
+  @supports not (-webkit-text-stroke: 0.015em $color-blue-light) {
+    color: $color-blue-light;
+  }
 }
