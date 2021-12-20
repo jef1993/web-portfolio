@@ -33,8 +33,10 @@ function Experience() {
 
       <div className="exp__container skills">
         <ul className=" skills__list">
-          {skills.map((el) => (
-            <li className="font-content skills__item">{el}</li>
+          {skills.map((el, i) => (
+            <li className="font-content skills__item" key={i}>
+              {el}
+            </li>
           ))}
         </ul>
         <div className="extra">
@@ -42,8 +44,10 @@ function Experience() {
             Also have experience with...
           </h3>
           <ul className="extra__list">
-            {extra.map((el) => (
-              <li className="font-wide extra__item">{el}</li>
+            {extra.map((el, i) => (
+              <li className="font-wide extra__item" key={i}>
+                {el}
+              </li>
             ))}
           </ul>
         </div>

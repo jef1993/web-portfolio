@@ -31,11 +31,17 @@
   }
 
   &__link-box {
-    font-size: 2.4rem;
+    font-size: 3rem;
+
+    @media screen and (max-width: 900px) {
+      font-size: max(2.4rem, 3.2vw);
+    }
   }
 
   &__link {
     cursor: pointer;
+    text-decoration: none;
+    color: $color-white;
 
     &:hover {
     }
@@ -205,7 +211,7 @@
     justify-content: flex-end;
     align-items: flex-start;
 
-    transition: all 0.3s;
+    transition: all 0.2s;
 
     @media screen and (max-width: 900px) {
       // justify-content: center;
@@ -244,7 +250,7 @@
       bottom: 0;
       left: 0;
       width: 0%;
-      height: 0.5rem;
+      height: 0.3rem;
       transform: translateY(100%);
       background-color: $color-white;
       transition: all 0.3s ease-in-out;
@@ -271,5 +277,17 @@
   }
 
   &__item {
+  }
+}
+
+.current {
+  transition: all 0.2 ease-in-out;
+  border-color: $color-white;
+  & > .projects__btn-box {
+    width: 100%;
+  }
+
+  & > .projects__btn-text::after {
+    width: 100%;
   }
 }

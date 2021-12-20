@@ -553,10 +553,17 @@ br {
   }
 }
 .projects__link-box {
-  font-size: 2.4rem;
+  font-size: 3rem;
+}
+@media screen and (max-width: 900px) {
+  .projects__link-box {
+    font-size: max(2.4rem, 3.2vw);
+  }
 }
 .projects__link {
   cursor: pointer;
+  text-decoration: none;
+  color: #e9e8e2;
 }
 .projects__divider {
   margin: 0 0.5em;
@@ -694,7 +701,7 @@ br {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 .projects__btn:hover {
   border-color: #e9e8e2;
@@ -726,7 +733,7 @@ br {
   bottom: 0;
   left: 0;
   width: 0%;
-  height: 0.5rem;
+  height: 0.3rem;
   transform: translateY(100%);
   background-color: #e9e8e2;
   transition: all 0.3s ease-in-out;
@@ -740,6 +747,17 @@ br {
   overflow: hidden;
   transition: all 0.2s ease-in-out;
   background-color: rgba(18, 23, 26, 0.4);
+}
+
+.current {
+  transition: all 0.2 ease-in-out;
+  border-color: #e9e8e2;
+}
+.current > .projects__btn-box {
+  width: 100%;
+}
+.current > .projects__btn-text::after {
+  width: 100%;
 }
 
 /*# sourceMappingURL=App.css.map */
