@@ -6,7 +6,7 @@ function About() {
     <section className="about" id="about">
       <header className="about__title">
         <h1 className="font-wide about__name">Jeffrey Leung</h1>
-        <h2 className="font-sub about__job">FrontEnd Developer</h2>
+        <h2 className="font-sub about__job">Software Developer</h2>
       </header>
 
       <p className="font-content about__content">

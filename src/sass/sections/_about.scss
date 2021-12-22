@@ -5,8 +5,8 @@
   border-image: linear-gradient(
       to bottom,
       $color-blue-light 0%,
-      rgba($color-blue-dark, 0.6) 45%,
-      transparent 100%
+      rgba($color-blue-dark, 0.9) 55%,
+      transparent 90%
     )
     1;
 
@@ -23,7 +23,7 @@
   }
 
   &__name {
-    font-size: 8.6rem;
+    font-size: 8.4rem;
     @include font-hollow;
     margin: 0;
 

@@ -23,6 +23,7 @@ function Projects(props) {
   const verSpring = useSpring({
     reset: true,
     from: { y: 80, opacity: 0 },
+
     to: { y: 0, opacity: 1 },
     config: {
       tension: 110,

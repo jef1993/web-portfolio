@@ -1,5 +1,5 @@
 .exp {
-  grid-area: 12/2 / span 7 / span 8;
+  grid-area: 13/2 / span 7 / span 8;
 
   display: grid;
   grid-template-columns: repeat(2, minmax(20rem, 53rem));
@@ -65,7 +65,7 @@
   border-image: linear-gradient(
       to right,
       $color-blue-light 0%,
-      rgba($color-blue-dark, 0.8) 75%
+      rgba($color-blue-dark, 0.9) 80%
     )
     1;
   display: grid;
@@ -122,7 +122,7 @@
   border-image: linear-gradient(
       to left,
       $color-blue-light 0%,
-      rgba($color-blue-dark, 0.8) 75%
+      rgba($color-blue-dark, 0.9) 80%
     )
     1;
 

@@ -15,9 +15,9 @@ function App() {
         <About />
         <Experience />
         <Projects />
-        <div className="contact-wrapper"></div>
       </div>
       <Contact />
+      {/* <div id="contact" className="contact-wrapper"></div> */}
     </div>
   );
 }

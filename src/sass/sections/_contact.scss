@@ -1,0 +1,106 @@
+.contact {
+  z-index: -2;
+  height: 100vh;
+  width: 100%;
+  font-size: 20rem;
+  background-image: linear-gradient(to bottom, $color-shadow, $color-black 40%);
+  @include flexCenter(column);
+
+  &__wrapper {
+    height: inherit;
+    position: fixed;
+    width: inherit;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 0;
+    background-color: rgba(24, 11, 24, 0.1);
+    display: grid;
+    gap: 1.5rem;
+
+    grid-template-rows: 1fr repeat(4, 12rem) 1fr;
+    grid-template-columns:
+      1fr minmax(4rem, 12rem) repeat(6, 12rem) minmax(4rem, 12rem)
+      1fr;
+    // @include main-grid-columns;
+
+    @media screen and (max-width: 1200px) {
+      grid-template-columns:
+        1fr repeat(8, minmax(4rem, 12rem))
+        1fr;
+    }
+  }
+
+  &__header {
+    font-size: 6.4rem;
+    grid-area: 2/2 / span 2 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 9ch;
+  }
+
+  &__container {
+    grid-area: 4/5 / span 2 / span 5;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @media screen and (max-width: 1200px) {
+      grid-area: 4/4 / span 2 / span 6;
+    }
+  }
+
+  &__content {
+    text-align: left;
+    margin: 0;
+
+    // background-color: rgb(85, 26, 26);
+  }
+
+  &__btns {
+    font-size: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    // align-self: flex-end;
+  }
+
+  &__btn {
+    margin: 0;
+    @include flexCenter(row);
+    text-decoration: none;
+    color: $color-white;
+    height: 5rem;
+    width: 28rem;
+    border: 0.1rem solid $color-white;
+    align-self: flex-end;
+
+    &:hover {
+      & > .contact__btn-text::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__btn-text {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 0.25em;
+      width: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateY(100%);
+      background-color: $color-white;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+.footer {
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: 1.5rem;
+}
