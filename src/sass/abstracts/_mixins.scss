@@ -23,3 +23,10 @@
     color: $color-blue-light;
   }
 }
+
+@mixin hidden {
+  opacity: 0;
+  visibility: hidden;
+  filter: grayscale(100%);
+  transition: all 0.3s ease-in-out;
+}

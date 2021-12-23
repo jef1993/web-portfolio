@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  @include hidden;
 
   &__title-box {
     display: flex;
@@ -259,7 +260,7 @@
       bottom: 0;
       left: 0;
       width: 0%;
-      height: 0.3rem;
+      height: 0.25em;
       transform: translateY(100%);
       background-color: $color-white;
       transition: all 0.3s ease-in-out;
@@ -278,16 +279,6 @@
   }
 }
 
-.tech {
-  &__title {
-  }
-
-  &__list {
-  }
-
-  &__item {
-  }
-}
 
 .current {
   transition: all 0.2 ease-in-out;

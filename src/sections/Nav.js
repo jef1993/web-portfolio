@@ -1,6 +1,11 @@
+import React, { useRef } from "react";
+import useElementOnScreen from "../hooks/useElementOnScreen";
+
 function Nav() {
+  const targetRef = useRef(null);
+  const navRef = useElementOnScreen(targetRef);
   return (
-    <nav className="nav">
+    <nav id="nav" className={`nav ${navRef ? "show" : ""}`} ref={targetRef}>
       <div className="nav__bar">
         <a className="font-wide nav__title" href="#nav">
           About

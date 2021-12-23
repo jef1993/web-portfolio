@@ -1,0 +1,31 @@
+::-webkit-scrollbar {
+  width: 2rem;
+  background: $color-black;
+
+  @media screen and (max-width: 600px) {
+    width: 1.5rem;
+    border: 0.3rem solid $color-black;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  margin-block: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  border: 0.4rem solid $color-black;
+  width: 1rem;
+  background: rgba($color-grey, 0.8);
+
+  &:hover {
+    background: $color-grey;
+  }
+}
+
+@supports (scrollbar-color: red blue) {
+  * {
+    scrollbar-color: $color-shadow $color-black;
+  }
+} ;

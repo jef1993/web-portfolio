@@ -9,9 +9,12 @@
   &:hover,
   &:focus {
     & .btn-next__link {
-      text-decoration: underline $color-white 0.25em;
-      padding: 0.8em 2.9em;
+      width: min(max(36rem, 36vw), 41rem);
       background-color: rgba($color-black, 0.6);
+
+      & > *::after {
+        width: 100%;
+      }
     }
   }
 
@@ -37,15 +40,28 @@
   &__link {
     color: $color-white;
     background-color: rgba($color-black, 0);
-    text-decoration: underline rgba($color-white, 0) 0.25em;
-    height: inherit;
-    width: 100%;
-    padding: 0.8em 2.4em;
+    height: 6rem;
+    width: min(max(33.5rem, 36vw), 38rem);
+    @include flexCenter(row);
     border: 0.1rem solid;
-    border-image-width: 0;
     position: relative;
     transition: all 0.2s;
-    display: table-cell;
+    text-decoration: none;
+  }
+
+  &__text {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 0.2em;
+      width: 0;
+      bottom: 0.1rem;
+      left: 0;
+      transform: translateY(100%);
+      background-color: $color-white;
+      transition: all 0.2s ease-in-out;
+    }
   }
 
   &__arrow {

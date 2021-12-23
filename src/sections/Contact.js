@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <section id="contact" className=" contact">
+    <section id="contact" className=" contact section">
       <div className="contact__wrapper">
         <header className="font-wide contact__header">
           Wanna work together?
@@ -27,9 +27,7 @@ function Contact() {
           </div>
         </div>
       </div>
-      <footer className="font-content footer">
-        Designed & coded by Jeffrey Leung &copy; {new Date().getFullYear()}
-      </footer>
+
     </section>
   );
 }

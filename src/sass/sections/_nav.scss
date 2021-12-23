@@ -1,10 +1,11 @@
 .nav {
-  grid-area: 1/4 / span 1 / span 4;
+  grid-area: 1/1 / span 1 / -1;
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
 
   @media screen and (max-width: 1200px) {
-    grid-area: 1/3 / span 1 / span 6;
+    grid-area: 1/1 / span 1 / -1;
   }
 
   &__bar {
@@ -17,10 +18,6 @@
     @media screen and (max-width: 1200px) {
       justify-content: center;
     }
-
-    // &:hover .nav__title:not(:hover) {
-    //   opacity: 0.6;
-    // }
   }
 
   &__title {
@@ -36,11 +33,120 @@
     }
 
     @media screen and (max-width: 900px) {
-      font-size: 2vw;
+      font-size: min(max(1.4rem, 2vw), 1.8rem);
+    }
+  }
+}
+
+.nav-side {
+  width: 5rem;
+  height: 5rem;
+  background: $color-black;
+  position: fixed;
+  top: 1.7rem;
+  right: 1.7rem;
+  z-index: 20;
+
+  &__input {
+    display: none;
+    &:checked ~ .nav-side__list {
+      opacity: 1;
+      top: -1.7rem;
+      right: 0;
     }
 
-    @media screen and (max-width: 600px) {
-      font-size: 1.2rem;
+    &:checked ~ .nav-side__label > span {
+      background-color: transparent;
+      &::before {
+        transform: rotateZ(-45deg);
+        top: 0;
+      }
+
+      &::after {
+        transform: rotateZ(45deg);
+        top: 0;
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $color-black, 0.6;
+    cursor: pointer;
+    z-index: 21;
+
+    & > span {
+      @include absCenter;
+      content: "";
+      height: 0.4rem;
+      width: 3rem;
+      background: $color-white;
+      transition: all 0.3s;
+
+      &::before,
+      &::after {
+        position: absolute;
+        height: inherit;
+        width: 3rem;
+        background: $color-white;
+        content: "";
+        transition: all 0.3s;
+      }
+
+      &::before {
+        top: -1rem;
+      }
+
+      &::after {
+        top: 1rem;
+        left: 0;
+      }
+    }
+  }
+
+  &__list {
+    padding: 4rem 1.6rem;
+    margin: 0;
+    position: absolute;
+    top: 7rem;
+    right: 0rem;
+    list-style: none;
+    z-index: 19;
+    opacity: 0;
+    transition: all 0.3s;
+    background: $color-black;
+    // box-shadow: 0px 10px 0px 0px $color-shadow;
+  }
+
+  &__item {
+    text-decoration: none;
+    width: 20rem;
+    display: flex;
+    color: $color-white;
+
+    &:hover {
+      & > *::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__text {
+    margin: 0;
+    position: relative;
+    padding-top: 0.6rem;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 0.15em;
+      width: 0%;
+      bottom: 0.05em;
+      left: 0;
+      transform: translateY(100%);
+      background-color: $color-white;
+      transition: all 0.2s ease-in-out;
     }
   }
 }

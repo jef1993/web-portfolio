@@ -1,11 +1,13 @@
 import ProjectBtn from "../components/ProjectBtn";
 import myProjects from "../data/projects";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useSpring, animated } from "react-spring";
+import useElementOnScreen from "../hooks/useElementOnScreen";
 
 function Projects(props) {
   const [curPj, setCurPj] = useState(myProjects.projects[0]);
+  const targetRef = useRef(null);
 
   const horSpring = useSpring({
     reset: true,
@@ -39,7 +41,11 @@ function Projects(props) {
   };
 
   return (
-    <section className="projects" id="projects">
+    <section
+      className={`projects ${useElementOnScreen(targetRef) ? "show" : ""}`}
+      id="projects"
+      ref={targetRef}
+    >
       <header className="font-wide projects__title-box">
         <h2 className="projects__title">Featured Projects</h2>
         <animated.h3 className="projects__name" style={horSpring}>
@@ -86,6 +92,7 @@ function Projects(props) {
         <div className="projects__btns">
           {myProjects.projects.map((el, i) => (
             <ProjectBtn
+              btnID={i}
               btnText={el.name}
               setProject={() => {
                 btnActive(el, i);

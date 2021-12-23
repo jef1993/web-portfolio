@@ -1,5 +1,5 @@
 .contact {
-  z-index: -2;
+  z-index: -5;
   height: 100vh;
   width: 100%;
   font-size: 20rem;
@@ -14,7 +14,6 @@
     left: 50%;
     transform: translate(-50%, 50%);
     z-index: 0;
-    background-color: rgba(24, 11, 24, 0.1);
     display: grid;
     gap: 1.5rem;
 
@@ -22,7 +21,6 @@
     grid-template-columns:
       1fr minmax(4rem, 12rem) repeat(6, 12rem) minmax(4rem, 12rem)
       1fr;
-    // @include main-grid-columns;
 
     @media screen and (max-width: 1200px) {
       grid-template-columns:
@@ -38,6 +36,7 @@
     flex-direction: column;
     justify-content: flex-end;
     width: 9ch;
+    z-index: -1;
   }
 
   &__container {
@@ -70,6 +69,7 @@
     margin: 0;
     @include flexCenter(row);
     text-decoration: none;
+    background-color: $color-black;
     color: $color-white;
     height: 5rem;
     width: 28rem;
@@ -99,8 +99,3 @@
   }
 }
 
-.footer {
-  font-size: 1.6rem;
-  position: absolute;
-  bottom: 1.5rem;
-}

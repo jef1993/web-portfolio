@@ -8,6 +8,9 @@ import vscode from "../img/vscode.svg";
 
 import BtnNext from "../components/BtnNext";
 
+import React, { useRef } from "react";
+import useElementOnScreen from "../hooks/useElementOnScreen";
+
 const skills = [
   "HTML",
   "CSS",
@@ -23,8 +26,14 @@ const skills = [
 const extra = ["Python", "MySQL", "Bootstrap", "Jest", "jQuery"];
 
 function Experience() {
+  const targetRef = useRef(null);
+
   return (
-    <section className="exp" id="exp">
+    <section
+      className={`exp ${useElementOnScreen(targetRef) ? "show" : ""}`}
+      id="exp"
+      ref={targetRef}
+    >
       <header className="exp__title-box">
         <h2 className="font-wide exp__title exp__title--1">Things I know</h2>
         <span className="font-wide exp__and">and</span>
