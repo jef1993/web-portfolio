@@ -1,6 +1,47 @@
 .footer {
+  height: max(12rem, 15vh);
   font-size: 1.6rem;
   background-color: $color-black;
-  padding: 1.5rem;
-  text-align: center;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  overflow-x: hidden;
+
+  &__links {
+    align-self: center;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  &__link {
+    display: inline-block;
+    height: 4rem;
+    width: 4rem;
+
+    & * {
+      transition: all 75ms ease-in-out;
+    }
+
+    &:hover * {
+      color: $color-grey-light;
+    }
+  }
+
+  &__container {
+    // background-color: cornflowerblue;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__copyright {
+    margin: 0;
+    padding: 1.5rem;
+  }
+  &__email {
+    margin: 0;
+    padding: 1.5rem;
+  }
 }

@@ -44,9 +44,9 @@ br {
   position: relative;
 
   @media screen and (max-width: 1200px) {
-    padding: 0 6rem;
+    // padding: 0 6rem;
     grid-template-columns:
-      minmax(0, 1fr) minmax(4rem, 12rem) repeat(6, minmax(4rem, 12rem)) minmax(
+      minmax(0, 1fr) minmax(4rem, 9rem) repeat(6, minmax(4rem, 12rem)) minmax(
         4rem,
         12rem
       )

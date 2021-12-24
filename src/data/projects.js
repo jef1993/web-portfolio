@@ -46,7 +46,7 @@ myProjects.projects = [
 
   new Project(
     `spotify clone`,
-    [`HTML`, `SCSS`],
+    [`HTML`, `SCSS`, "Javascript"],
     spotifyClone,
     "A clone of Spotify’s homepage. Entire responsive design is replicated, including the pop-up menu.",
     `https://github.com/jef1993/Spotify-Clone`,

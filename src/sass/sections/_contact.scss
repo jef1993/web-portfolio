@@ -1,6 +1,7 @@
 .contact {
   z-index: -5;
   height: 100vh;
+  min-height: 36rem;
   width: 100%;
   font-size: 20rem;
   background-image: linear-gradient(to bottom, $color-shadow, $color-black 40%);
@@ -53,8 +54,6 @@
   &__content {
     text-align: left;
     margin: 0;
-
-    // background-color: rgb(85, 26, 26);
   }
 
   &__btns {
@@ -62,7 +61,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    // align-self: flex-end;
   }
 
   &__btn {
@@ -98,4 +96,3 @@
     }
   }
 }
-

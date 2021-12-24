@@ -43,8 +43,7 @@ br {
 }
 @media screen and (max-width: 1200px) {
   .main {
-    padding: 0 6rem;
-    grid-template-columns: minmax(0, 1fr) minmax(4rem, 12rem) repeat(6, minmax(4rem, 12rem)) minmax(4rem, 12rem) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(4rem, 9rem) repeat(6, minmax(4rem, 12rem)) minmax(4rem, 12rem) minmax(0, 1fr);
   }
 }
 @media screen and (max-width: 900px) {
@@ -114,7 +113,7 @@ nav {
   display: table;
 }
 .btn-next:hover .btn-next__link, .btn-next:focus .btn-next__link {
-  width: min(max(36rem, 36vw), 41rem);
+  width: min(max(36rem, 40vw), 41rem);
   background-color: rgba(15, 19, 22, 0.6);
 }
 .btn-next:hover .btn-next__link > *::after, .btn-next:focus .btn-next__link > *::after {
@@ -375,7 +374,7 @@ nav {
   justify-content: center;
 }
 .about__name {
-  font-size: 8.4rem;
+  font-size: 8.2rem;
   color: transparent;
   margin: 0;
 }
@@ -391,26 +390,12 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .about__name {
-    font-size: 7.2vw;
-  }
-}
-@media screen and (max-width: 900px) {
-  .about__name {
-    font-size: 8.2vw;
+    font-size: max(3.6rem, min(7.4vw, 8.2rem));
   }
 }
 .about__job {
   margin: 0 0 5rem 0;
-}
-@media screen and (max-width: 1200px) {
-  .about__job {
-    font-size: 2.4rem;
-  }
-}
-@media screen and (max-width: 800px) {
-  .about__job {
-    font-size: 3vw;
-  }
+  font-size: max(1.6rem, min(2.8vw, 3.2rem));
 }
 .about__content {
   width: 40rem;
@@ -419,7 +404,7 @@ nav {
 @media screen and (max-width: 600px) {
   .about__content {
     width: 65vmin;
-    font-size: 4vmin;
+    font-size: max(1.2rem, 4vmin);
   }
 }
 
@@ -881,13 +866,13 @@ nav {
   align-items: flex-start;
   transition: all 0.2s;
 }
-.projects__btn:hover, .projects__btn:focus {
+.projects__btn:hover {
   border-color: #e9e8e2;
 }
-.projects__btn:hover > .projects__btn-box, .projects__btn:focus > .projects__btn-box {
+.projects__btn:hover > .projects__btn-box {
   width: 100%;
 }
-.projects__btn:hover > .projects__btn-text::after, .projects__btn:focus > .projects__btn-text::after {
+.projects__btn:hover > .projects__btn-text::after {
   width: 100%;
 }
 .projects__btn-text {
@@ -938,9 +923,20 @@ nav {
   width: 100%;
 }
 
+.chosen {
+  border-color: #e9e8e2;
+}
+.chosen > .projects__btn-box {
+  width: 100%;
+}
+.chosen > .projects__btn-text::after {
+  width: 100%;
+}
+
 .contact {
   z-index: -5;
   height: 100vh;
+  min-height: 36rem;
   width: 100%;
   font-size: 20rem;
   background-image: linear-gradient(to bottom, #101010, #0f1316 40%);
@@ -1030,10 +1026,44 @@ nav {
 }
 
 .footer {
+  height: max(12rem, 15vh);
   font-size: 1.6rem;
   background-color: #0f1316;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  overflow-x: hidden;
+}
+.footer__links {
+  align-self: center;
+  display: flex;
+  gap: 1.5rem;
+}
+.footer__link {
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
+}
+.footer__link * {
+  transition: all 75ms ease-in-out;
+}
+.footer__link:hover * {
+  color: #505257;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__copyright {
+  margin: 0;
   padding: 1.5rem;
-  text-align: center;
+}
+.footer__email {
+  margin: 0;
+  padding: 1.5rem;
 }
 
 /*# sourceMappingURL=App.css.map */

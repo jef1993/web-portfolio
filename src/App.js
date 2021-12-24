@@ -7,8 +7,8 @@ import About from "./sections/About";
 import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
-
 import NavSide from "./sections/NavSide";
+import Footer from "./sections/Footer";
 
 function App() {
   return (
@@ -22,9 +22,7 @@ function App() {
         <Projects />
       </div>
       <Contact />
-      <footer className="font-content footer">
-        Designed & coded by Jeffrey Leung &copy; {new Date().getFullYear()}
-      </footer>
+      <Footer />
     </div>
   );
 }

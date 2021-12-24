@@ -23,31 +23,25 @@
   }
 
   &__name {
-    font-size: 8.4rem;
+    font-size: 8.2rem;
     @include font-hollow;
     margin: 0;
 
     @media screen and (max-width: 1200px) {
-      font-size: 7.2vw;
+      font-size: max(3.6rem, min(7.4vw, 8.2rem));
     }
 
-    @media screen and (max-width: 900px) {
-      font-size: 8.2vw;
-    }
+    // @media screen and (max-width: 900px) {
+    //   font-size: 8.2vw;
+    // }
 
-    @media screen and (max-width: 600px) {
-    }
+    // @media screen and (max-width: 600px) {
+    // }
   }
 
   &__job {
     margin: 0 0 5rem 0;
-    @media screen and (max-width: 1200px) {
-      font-size: 2.4rem;
-    }
-
-    @media screen and (max-width: 800px) {
-      font-size: 3vw;
-    }
+    font-size: max(1.6rem, min(2.8vw, 3.2rem));
   }
 
   &__content {
@@ -56,7 +50,7 @@
 
     @media screen and (max-width: 600px) {
       width: 65vmin;
-      font-size: 4vmin;
+      font-size: max(1.2rem, 4vmin);
     }
   }
 }

@@ -226,8 +226,7 @@
       // justify-content: center;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       border-color: $color-white;
       & > .projects__btn-box {
         width: 100%;
@@ -279,9 +278,19 @@
   }
 }
 
-
 .current {
   transition: all 0.2 ease-in-out;
+  border-color: $color-white;
+  & > .projects__btn-box {
+    width: 100%;
+  }
+
+  & > .projects__btn-text::after {
+    width: 100%;
+  }
+}
+
+.chosen {
   border-color: $color-white;
   & > .projects__btn-box {
     width: 100%;

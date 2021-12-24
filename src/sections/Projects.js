@@ -1,7 +1,7 @@
 import ProjectBtn from "../components/ProjectBtn";
 import myProjects from "../data/projects";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 import useElementOnScreen from "../hooks/useElementOnScreen";
 
@@ -36,9 +36,21 @@ function Projects(props) {
     },
   });
 
+  const pjChosen = (index) => {
+    document
+      .querySelectorAll(".projects__btn")
+      .forEach((el) => el.classList.remove("chosen"));
+    document.querySelectorAll(".projects__btn")[index].classList.add("chosen");
+  };
+
   const btnActive = (btn, index) => {
     setCurPj(myProjects.projects.find((obj) => obj.name === btn.name));
+    pjChosen(index);
   };
+
+  useEffect(() => {
+    pjChosen(0);
+  }, []);
 
   return (
     <section
@@ -92,7 +104,7 @@ function Projects(props) {
         <div className="projects__btns">
           {myProjects.projects.map((el, i) => (
             <ProjectBtn
-              btnID={i}
+              btnID={`btn-${i}`}
               btnText={el.name}
               setProject={() => {
                 btnActive(el, i);

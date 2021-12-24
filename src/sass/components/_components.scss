@@ -9,7 +9,7 @@
   &:hover,
   &:focus {
     & .btn-next__link {
-      width: min(max(36rem, 36vw), 41rem);
+      width: min(max(36rem, 40vw), 41rem);
       background-color: rgba($color-black, 0.6);
 
       & > *::after {

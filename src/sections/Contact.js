@@ -15,7 +15,7 @@ function Contact() {
               className="contact__btn"
               href="mailto: https://jeffrey24493@gmail.com"
             >
-              <div className="contact__btn-text">contact me</div>
+              <div className="contact__btn-text">message me</div>
             </a>
             <a
               className="contact__btn contact__cv"
@@ -27,7 +27,6 @@ function Contact() {
           </div>
         </div>
       </div>
-
     </section>
   );
 }
