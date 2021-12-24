@@ -70,7 +70,7 @@ function Experience() {
           <Tool type="scrum" src={trello} name="Trello" />
         </ul>
       </div>
-      <BtnNext toSection="#projects" text="My projects" />
+      <BtnNext id="exp__next" toSection="#projects" text="My projects" />
     </section>
   );
 }

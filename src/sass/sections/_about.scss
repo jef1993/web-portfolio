@@ -28,7 +28,7 @@
     margin: 0;
 
     @media screen and (max-width: 1200px) {
-      font-size: max(3.6rem, min(7.4vw, 8.2rem));
+      font-size: max(2.8rem, min(7.4vw, 8.2rem));
     }
 
     // @media screen and (max-width: 900px) {
@@ -41,7 +41,7 @@
 
   &__job {
     margin: 0 0 5rem 0;
-    font-size: max(1.6rem, min(2.8vw, 3.2rem));
+    font-size: max(1.2rem, min(2.8vw, 3.2rem));
   }
 
   &__content {

@@ -1,5 +1,5 @@
 .footer {
-  height: max(12rem, 15vh);
+  height: max(10rem, 14vh);
   font-size: 1.6rem;
   background-color: $color-black;
   padding-top: 1.5rem;
@@ -31,17 +31,17 @@
   }
 
   &__container {
-    // background-color: cornflowerblue;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
   }
 
   &__copyright {
     margin: 0;
-    padding: 1.5rem;
   }
   &__email {
     margin: 0;
-    padding: 1.5rem;
   }
 }
