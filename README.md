@@ -7,10 +7,12 @@
 <img src='https://raw.githubusercontent.com/jef1993/web-portfolio/master/src/img/portfolio.jpg' alt='preview' width='640'></img>
 </div>
 
-<h1 align='center'>
+<h1 align='center'>Welcome to my portfolio site!</h1>
+
+<p align='center'>
 <a 
- href='https://jeffrey-leung.netlify.app/'>Welcome to my portfolio site!</a>
-</h1>
+ href='https://jeffrey-leung.netlify.app/'>jeffrey-leung.netlify.app/</a>
+</p>
 
 ## Tech used
 
