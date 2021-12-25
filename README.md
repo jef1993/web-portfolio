@@ -7,7 +7,7 @@
 <img src='https://raw.githubusercontent.com/jef1993/web-portfolio/master/src/img/portfolio.jpg' alt='preview' width='640'></img>
 </div>
 
-<h1 align='center'>Welcome to my portfolio site!</h1>
+<h3 align='center'>Welcome to my portfolio site!</h3>
 
 <p align='center'>
 <a 
