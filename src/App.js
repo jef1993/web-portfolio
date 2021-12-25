@@ -1,30 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import "./App.css";
-
-import Nav from "./sections/Nav";
-import About from "./sections/About";
-import Experience from "./sections/Experience";
-import Projects from "./sections/Projects";
-import Contact from "./sections/Contact";
-import NavSide from "./sections/NavSide";
-import Footer from "./sections/Footer";
+import Loading from "./sections/Loading";
+import Page from "./Page";
 
 function App() {
-  return (
-    <div className="App">
-      <div className="main">
-        <div className="bg"></div>
-        <NavSide />
-        <Nav />
-        <About />
-        <Experience />
-        <Projects />
-      </div>
-      <Contact />
-      <Footer />
-    </div>
-  );
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(true);
+    }, 2800);
+  }, []);
+
+  return <div className="App">{!loading ? <Loading /> : <Page />}</div>;
 }
 
 export default App;

@@ -1,0 +1,71 @@
+@keyframes logo-tl {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 5.5rem;
+  }
+}
+
+@keyframes logo-tr {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 9.5rem;
+  }
+}
+
+@keyframes logo-side {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 17rem;
+  }
+}
+
+@keyframes logo-b {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 7rem;
+  }
+}
+
+@keyframes logo-jt {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 16rem;
+  }
+}
+
+@keyframes logo-lt {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 12rem;
+  }
+}
+
+@keyframes logo-jlb {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 2.5rem;
+  }
+}
+
+@keyframes logo-end {
+  0% {
+    transform: scale(0.4);
+  }
+  100% {
+    transform: scale(0);
+  }
+}

@@ -14,6 +14,8 @@ function Contact() {
             <a
               className="contact__btn"
               href="mailto: https://jeffrey24493@gmail.com"
+              target="_blank"
+              rel="noreferrer noopener"
             >
               <div className="contact__btn-text">message me</div>
             </a>
@@ -21,6 +23,8 @@ function Contact() {
               className="contact__btn contact__cv"
               download
               href="https://drive.google.com/file/d/1IjNxVKA6Zwn6M_qpwbszJ2jToxNNkXgk/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer noopener"
             >
               <div className="contact__btn-text">download cv</div>
             </a>

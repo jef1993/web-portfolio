@@ -76,7 +76,7 @@ function Projects(props) {
           <a
             className=" projects__link"
             href={curPj.website}
-            target={`_blank`}
+            target='_blank'
             rel="noreferrer noopener"
           >
             Website

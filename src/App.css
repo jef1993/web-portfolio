@@ -1,4 +1,68 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,500&family=Syncopate:wght@400;700&display=swap");
+@keyframes logo-tl {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 5.5rem;
+  }
+}
+@keyframes logo-tr {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 9.5rem;
+  }
+}
+@keyframes logo-side {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 17rem;
+  }
+}
+@keyframes logo-b {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 7rem;
+  }
+}
+@keyframes logo-jt {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 16rem;
+  }
+}
+@keyframes logo-lt {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 12rem;
+  }
+}
+@keyframes logo-jlb {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 2.5rem;
+  }
+}
+@keyframes logo-end {
+  0% {
+    transform: scale(0.4);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 * *::after *::before {
   margin: 0;
   padding: 0;
@@ -14,6 +78,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background: #0f1316;
 }
 
 br {
@@ -24,6 +89,7 @@ br {
 
 .App {
   position: relative;
+  background: #0f1316;
 }
 
 .main {
@@ -153,7 +219,7 @@ nav {
 @media screen and (max-width: 600px) {
   .btn-next__link {
     height: 4.8rem;
-    width: 25rem;
+    width: 27rem;
   }
 }
 .btn-next__text {
@@ -233,6 +299,94 @@ nav {
     scrollbar-color: #101010 #0f1316;
   }
 }
+.loading {
+  min-height: 100vh;
+  height: auto;
+  width: 100vw;
+  background: #0f1316;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 20rem;
+  height: 20rem;
+  position: relative;
+  transform: scale(0.4);
+  animation: logo-end 0.4s forwards 2.2s;
+}
+.logo * {
+  background-color: #e9e8e2;
+  height: 3rem;
+  position: absolute;
+}
+.logo--tl {
+  width: 0;
+  top: 0;
+  right: 14.5rem;
+  animation: logo-tl 0.4s forwards;
+}
+.logo--tr {
+  width: 0;
+  top: 0;
+  left: 10.5rem;
+  animation: logo-tr 0.4s forwards;
+}
+.logo--l {
+  width: 3rem;
+  top: 3rem;
+  left: 0;
+  height: 0;
+  animation: logo-side 0.4s forwards 0.4s;
+}
+.logo--r {
+  width: 3rem;
+  top: 3rem;
+  right: 0;
+  height: 0;
+  animation: logo-side 0.4s forwards 0.4s;
+}
+.logo--bl {
+  bottom: 0;
+  left: 3rem;
+  width: 0;
+  animation: logo-b 0.4s forwards 0.8s;
+}
+.logo--br {
+  bottom: 0;
+  right: 3rem;
+  width: 0;
+  animation: logo-b 0.4s forwards 0.8s;
+}
+.logo--jt {
+  top: 0;
+  left: 6.5rem;
+  width: 3rem;
+  height: 0;
+  animation: logo-jt 0.4s forwards 1.2s;
+}
+.logo--lt {
+  top: 4rem;
+  left: 10.5rem;
+  width: 3rem;
+  height: 0;
+  animation: logo-lt 0.35s forwards 1.25s;
+}
+.logo--jb {
+  bottom: 4rem;
+  right: 13.5rem;
+  width: 0;
+  animation: logo-jlb 0.4s forwards 1.6s;
+}
+.logo--lb {
+  bottom: 4rem;
+  left: 13.5rem;
+  width: 0;
+  animation: logo-jlb 0.4s forwards 1.6s;
+}
+
 .nav {
   grid-area: 1/1/span 1/-1;
   display: flex;
@@ -419,7 +573,7 @@ nav {
   justify-content: center;
 }
 .about__name {
-  font-size: 8.2rem;
+  font-size: max(7.2rem, min(6.6vw, 8.2rem));
   color: transparent;
   margin: 0;
 }
@@ -435,7 +589,12 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .about__name {
-    font-size: max(2.8rem, min(7.4vw, 8.2rem));
+    font-size: max(2.8rem, min(7vw, 7.8rem));
+  }
+}
+@media screen and (max-width: 900px) {
+  .about__name {
+    font-size: max(2.8rem, min(7.6vw, 7.2rem));
   }
 }
 .about__job {

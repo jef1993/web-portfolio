@@ -1,0 +1,94 @@
+.loading {
+  min-height: 100vh;
+  height: auto;
+  width: 100vw;
+  background: $color-black;
+  @include flexCenter(row);
+}
+
+.logo {
+  width: 20rem;
+  height: 20rem;
+  position: relative;
+  transform: scale(0.4);
+  animation: logo-end 0.4s forwards 2.2s;
+  & * {
+    background-color: $color-white;
+    height: 3rem;
+    position: absolute;
+  }
+
+  &--tl {
+    width: 0;
+    top: 0;
+    right: 14.5rem;
+    animation: logo-tl 0.4s forwards;
+  }
+
+  &--tr {
+    width: 0;
+    top: 0;
+    left: 10.5rem;
+    animation: logo-tr 0.4s forwards;
+  }
+
+  &--l {
+    width: 3rem;
+    top: 3rem;
+    left: 0;
+    height: 0;
+    animation: logo-side 0.4s forwards 0.4s;
+  }
+
+  &--r {
+    width: 3rem;
+    top: 3rem;
+    right: 0;
+    height: 0;
+    animation: logo-side 0.4s forwards 0.4s;
+  }
+
+  &--bl {
+    bottom: 0;
+    left: 3rem;
+    width: 0;
+    animation: logo-b 0.4s forwards 0.8s;
+  }
+
+  &--br {
+    bottom: 0;
+    right: 3rem;
+    width: 0;
+    animation: logo-b 0.4s forwards 0.8s;
+  }
+
+  &--jt {
+    top: 0;
+    left: 6.5rem;
+    width: 3rem;
+    height: 0;
+    animation: logo-jt 0.4s forwards 1.2s;
+  }
+
+  &--lt {
+    top: 4rem;
+    left: 10.5rem;
+    width: 3rem;
+    height: 0;
+    animation: logo-lt 0.35s forwards 1.25s;
+  }
+
+  &--jb {
+    bottom: 4rem;
+    right: 13.5rem;
+    width: 0;
+    animation: logo-jlb 0.4s forwards 1.6s;
+  }
+
+  &--lb {
+    bottom: 4rem;
+    left: 13.5rem;
+    width: 0;
+    animation: logo-jlb 0.4s forwards 1.6s;
+  }
+}
