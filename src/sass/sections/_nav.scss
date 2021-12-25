@@ -44,9 +44,18 @@
   height: 5rem;
   background: $color-black;
   position: fixed;
-  top: 1.7rem;
+  top: 0.5rem;
   right: 1.7rem;
+  opacity: 0;
   z-index: 20;
+  animation: nav-side 0.4s ease-in-out forwards;
+
+  @keyframes nav-side {
+    to {
+      opacity: 1;
+      top: 1.7rem;
+    }
+  }
 
   @media screen and (max-width: 600px) {
     width: 4rem;

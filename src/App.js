@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(true);
-    }, 2800);
+    }, 3000);
   }, []);
 
   return <div className="App">{!loading ? <Loading /> : <Page />}</div>;

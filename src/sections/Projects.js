@@ -1,4 +1,5 @@
 import ProjectBtn from "../components/ProjectBtn";
+import ProjectImg from "../components/ProjectImg";
 import myProjects from "../data/projects";
 
 import React, { useState, useRef, useEffect } from "react";
@@ -23,7 +24,6 @@ function Projects(props) {
   });
 
   const verSpring = useSpring({
-    reset: true,
     from: { y: 80, opacity: 0 },
 
     to: { y: 0, opacity: 1 },
@@ -47,6 +47,14 @@ function Projects(props) {
     setCurPj(myProjects.projects.find((obj) => obj.name === btn.name));
     pjChosen(index);
   };
+
+  // const preload = () => {
+  //   myProjects.projects.map((pic) => {
+  //     const img = new Image();
+  //     img.src = pic.img;
+  //     return img;
+  //   });
+  // };
 
   useEffect(() => {
     pjChosen(0);
@@ -76,7 +84,7 @@ function Projects(props) {
           <a
             className=" projects__link"
             href={curPj.website}
-            target='_blank'
+            target="_blank"
             rel="noreferrer noopener"
           >
             Website
@@ -94,8 +102,7 @@ function Projects(props) {
           ))}
         </animated.ul>
         <animated.div className="projects__preview" style={horSpring}>
-          <img alt="preview" className="projects__img" src={curPj.img}></img>
-
+          <ProjectImg url={curPj.img} />
           <div className="projects__content">
             <p className="font-content projects__text">{curPj.content}</p>
           </div>
@@ -104,6 +111,7 @@ function Projects(props) {
         <div className="projects__btns">
           {myProjects.projects.map((el, i) => (
             <ProjectBtn
+              key={i}
               btnID={`btn-${i}`}
               btnText={el.name}
               setProject={() => {

@@ -1,66 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,500&family=Syncopate:wght@400;700&display=swap");
 @keyframes logo-tl {
-  0% {
-    width: 0;
-  }
   100% {
     width: 5.5rem;
   }
 }
 @keyframes logo-tr {
-  0% {
-    width: 0;
-  }
   100% {
     width: 9.5rem;
   }
 }
 @keyframes logo-side {
-  0% {
-    height: 0;
-  }
   100% {
     height: 17rem;
   }
 }
 @keyframes logo-b {
-  0% {
-    width: 0;
-  }
   100% {
     width: 7rem;
   }
 }
 @keyframes logo-jt {
-  0% {
-    height: 0;
-  }
   100% {
     height: 16rem;
   }
 }
 @keyframes logo-lt {
-  0% {
-    height: 0;
-  }
   100% {
     height: 12rem;
   }
 }
 @keyframes logo-jlb {
-  0% {
-    width: 0;
-  }
   100% {
     width: 2.5rem;
   }
 }
 @keyframes logo-end {
-  0% {
-    transform: scale(0.4);
-  }
   100% {
     transform: scale(0);
+  }
+}
+@keyframes nav-side {
+  to {
+    opacity: 1;
+    top: 1.7rem;
   }
 }
 * *::after *::before {
@@ -178,12 +160,12 @@ nav {
   padding: 0;
 }
 .btn-next:hover .btn-next__link, .btn-next:focus .btn-next__link {
-  width: 42rem;
+  width: 38rem;
   background-color: rgba(15, 19, 22, 0.6);
 }
 @media screen and (max-width: 600px) {
   .btn-next:hover .btn-next__link, .btn-next:focus .btn-next__link {
-    width: 32rem;
+    width: 30rem;
   }
 }
 .btn-next:hover .btn-next__link > *::after, .btn-next:focus .btn-next__link > *::after {
@@ -206,7 +188,7 @@ nav {
   color: #e9e8e2;
   background-color: rgba(15, 19, 22, 0);
   height: 6rem;
-  width: 35rem;
+  width: 34rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -315,7 +297,7 @@ nav {
   height: 20rem;
   position: relative;
   transform: scale(0.4);
-  animation: logo-end 0.4s forwards 2.2s;
+  animation: logo-end 0.4s forwards 2.4s;
 }
 .logo * {
   background-color: #e9e8e2;
@@ -433,9 +415,17 @@ nav {
   height: 5rem;
   background: #0f1316;
   position: fixed;
-  top: 1.7rem;
+  top: 0.5rem;
   right: 1.7rem;
+  opacity: 0;
   z-index: 20;
+  animation: nav-side 0.4s ease-in-out forwards;
+}
+@keyframes nav-side {
+  to {
+    opacity: 1;
+    top: 1.7rem;
+  }
 }
 @media screen and (max-width: 600px) {
   .nav-side {

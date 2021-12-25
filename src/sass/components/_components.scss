@@ -9,11 +9,11 @@
   &:hover,
   &:focus {
     & .btn-next__link {
-      width: 42rem;
+      width: 38rem;
       background-color: rgba($color-black, 0.6);
 
       @media screen and (max-width: 600px) {
-        width: 32rem;
+        width: 30rem;
       }
 
       & > *::after {
@@ -45,7 +45,7 @@
     color: $color-white;
     background-color: rgba($color-black, 0);
     height: 6rem;
-    width: 35rem;
+    width: 34rem;
     @include flexCenter(row);
     border: 0.1rem solid;
     position: relative;
