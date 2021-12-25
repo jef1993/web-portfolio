@@ -11,7 +11,7 @@
 
 <h3 align='center'>
 <a 
- href='https://jeffrey-leung.netlify.app/'>jeffrey-leung.netlify.app/</a>
+ href='https://jeffreyleung.netlify.app/'>jeffreyleung.netlify.app/</a>
 </h3>
 
 ## Tech used
