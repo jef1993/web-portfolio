@@ -3,6 +3,8 @@
 <img src='(https://api.netlify.com/api/v1/badges/5506b004-43d2-44e4-be95-485a913334ef/deploy-status' alt='Netlify Status'/>
 </p>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5506b004-43d2-44e4-be95-485a913334ef/deploy-status)](https://app.netlify.com/sites/jeffreyleung/deploys)
+
 <div align='center'>
 <img src='https://raw.githubusercontent.com/jef1993/web-portfolio/master/src/img/portfolio.jpg' alt='preview' width='640'></img>
 </div>
