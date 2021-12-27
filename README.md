@@ -1,5 +1,5 @@
 <p align='center'>
-<a href='https://app.netlify.com/sites/jeffrey-leung/deploys'></a>
+<a href='https://app.netlify.com/sites/jeffreyleung/deploys'></a>
 <img src='https://api.netlify.com/api/v1/badges/b61bccda-885e-4c9b-8d10-2a284558ddef/deploy-status' alt='Netlify Status'/>
 </p>
 
