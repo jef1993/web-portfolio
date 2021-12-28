@@ -282,12 +282,11 @@ nav {
   }
 }
 .loading {
-  min-height: 100vh;
-  height: auto;
+  height: 100vh;
   width: 100vw;
   background: #0f1316;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
