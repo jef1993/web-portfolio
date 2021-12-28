@@ -18,7 +18,7 @@
     display: grid;
     gap: 1.5rem;
 
-    grid-template-rows: 1fr repeat(4, 12rem) 1fr;
+    grid-template-rows: 1fr 4rem repeat(3, 12rem) 1fr;
     grid-template-columns:
       1fr minmax(4rem, 12rem) repeat(6, 12rem) minmax(4rem, 12rem)
       1fr;
