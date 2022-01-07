@@ -19,7 +19,7 @@ const myProjects = {};
 myProjects.projects = [
   new Project(
     `movilist`,
-    [`HTML`, `SCSS`, `Javascript`, `React`, `React Router`],
+    [`HTML`, `SCSS`, `Javascript`, `React.js`, `React Router`],
     movilist,
     "A movie search tool allows users to save movie data from The Movie Database(TMDB) to their accounts. Developed collaboratively in an agile environment I majorly contributed to the Front-end of the application.",
     `https://github.com/jef1993/movilist-react`,

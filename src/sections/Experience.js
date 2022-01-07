@@ -16,14 +16,14 @@ const skills = [
   "CSS",
   "Javascript",
   "Scss",
-  "React",
+  "React.js",
   "Node.js",
   "Express",
   "MongoDB",
   "Mongoose",
 ];
 
-const extra = ["Python", "MySQL", "Bootstrap", "Jest", "jQuery"];
+const extra = ["Python", "MySQL", "Bootstrap", "Jest", "jQuery", "Next.js"];
 
 function Experience() {
   const targetRef = useRef(null);
