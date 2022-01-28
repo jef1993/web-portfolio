@@ -24,8 +24,8 @@ function Projects(props) {
   });
 
   const verSpring = useSpring({
+    reset: true,
     from: { y: 80, opacity: 0 },
-
     to: { y: 0, opacity: 1 },
     config: {
       tension: 110,
@@ -96,9 +96,13 @@ function Projects(props) {
         <div className="projects__frame"></div>
         <animated.ul className="projects__tech" style={verSpring}>
           {curPj.techList.map((el, i) => (
-            <li className="font-content projects__tech-item" key={i}>
+            <animated.li
+              className="font-content projects__tech-item"
+              key={i}
+              style={verSpring}
+            >
               {el}
-            </li>
+            </animated.li>
           ))}
         </animated.ul>
         <animated.div className="projects__preview" style={horSpring}>
