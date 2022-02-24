@@ -15,7 +15,7 @@ const skills = [
   "HTML",
   "CSS",
   "Javascript",
-  "Scss",
+  "SASS",
   "React.js",
   "Node.js",
   "Express",
