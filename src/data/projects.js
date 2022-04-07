@@ -2,6 +2,7 @@ import movilist from "../img/projects/movilist.jpg";
 import blackjack from "../img/projects/blackjack.jpg";
 import drumpad from "../img/projects/drumpad.jpg";
 import spotifyClone from "../img/projects/spotify-clone.jpg";
+import expenseTracker from "../img/projects/expense-tracker.jpg";
 
 class Project {
   constructor(name, techList, imgName, content, github, website) {
@@ -51,6 +52,15 @@ myProjects.projects = [
     "A clone of Spotify’s homepage. Entire responsive design is replicated, including the pop-up menu.",
     `https://github.com/jef1993/Spotify-Clone`,
     `https://jef1993.github.io/Spotify-Clone/`
+  ),
+
+  new Project(
+    `expense tracker`,
+    [`HTML`, `SASS`, "Javascript", "React"],
+    expenseTracker,
+    "An expense tracker with expenses monthly and yearly analysis features. Use browser's local stroage to store data.",
+    `https://github.com/jef1993/react-expense-tracker`,
+    `https://the-expense-tracker-react.netlify.app/`
   ),
 ];
 
