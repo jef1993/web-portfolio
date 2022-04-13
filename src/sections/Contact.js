@@ -7,8 +7,8 @@ function Contact() {
         </header>
         <div className="contact__container">
           <p className="font-content contact__content">
-            I am currently looking for a full-time position, feel free to
-            contact me and I'll get back to you as soon as possible!
+            I am currently working as full-time Frontend developer at OPOP
+            media.
           </p>
           <div className="font-wide contact__btns">
             <a

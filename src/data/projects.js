@@ -3,6 +3,7 @@ import blackjack from "../img/projects/blackjack.jpg";
 import drumpad from "../img/projects/drumpad.jpg";
 import spotifyClone from "../img/projects/spotify-clone.jpg";
 import expenseTracker from "../img/projects/expense-tracker.jpg";
+import aesthetics from "../img/projects/aesthetics.png";
 
 class Project {
   constructor(name, techList, imgName, content, github, website) {
@@ -61,6 +62,14 @@ myProjects.projects = [
     "An expense tracker with expenses monthly and yearly analysis features. Use browser's local stroage to store data.",
     `https://github.com/jef1993/react-expense-tracker`,
     `https://the-expense-tracker-react.netlify.app/`
+  ),
+  new Project(
+    "The Aesthetics",
+    [`HTML`, `SASS`, "Javascript", "React"],
+    aesthetics,
+    "A Replica of the homepage of The Aesthetics lounge with no responsive design implemented as the techincal test for Frontend position in OPOP media.",
+    `https://github.com/jef1993/aesthetics-demo`,
+    `https://theaestheticlounge.netlify.app/`
   ),
 ];
 
