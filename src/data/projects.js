@@ -67,7 +67,7 @@ myProjects.projects = [
     "The Aesthetics",
     [`HTML`, `SASS`, "Javascript", "React"],
     aesthetics,
-    "A Replica of the homepage of The Aesthetics lounge with no responsive design implemented as the techincal test for Frontend position in OPOP media.",
+    "A Replica of the homepage of The Aesthetics lounge with no responsive design implemented as the techincal test for a Front end position at OPOP media.",
     `https://github.com/jef1993/aesthetics-demo`,
     `https://theaestheticlounge.netlify.app/`
   ),
